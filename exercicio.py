@@ -23,11 +23,22 @@
 
 #Contar Valores Únicos em uma Lista
 
-def contar_unicos(lista:list[float]) ->int:
-    lista_unicos = []
-    for n in lista:
-        if n not in lista_unicos:
-            lista_unicos.append(n)
-    return len(lista_unicos)
+# def contar_unicos(lista:list[float]) ->int:
+#     lista_unicos = []
+#     for n in lista:
+#         if n not in lista_unicos:
+#             lista_unicos.append(n)
+#     return len(lista_unicos)
 
-print(contar_unicos([23,2,5,4,5]))
+# print(contar_unicos([23,2,5,4,5]))
+
+#Converter Celsius para Fahrenheit em uma Lista
+
+def converter_celsius_fahrenheit(lista:list[float]) ->list[float]:
+    lista_fahrenheit = []
+    for n in lista:
+        fahrenheit = (n * 1.8) + 32
+        lista_fahrenheit.append(fahrenheit)
+    return lista_fahrenheit
+
+print(converter_celsius_fahrenheit([23,2,5,4,5]))
