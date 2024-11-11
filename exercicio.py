@@ -34,11 +34,24 @@
 
 #Converter Celsius para Fahrenheit em uma Lista
 
-def converter_celsius_fahrenheit(lista:list[float]) ->list[float]:
-    lista_fahrenheit = []
-    for n in lista:
-        fahrenheit = (n * 1.8) + 32
-        lista_fahrenheit.append(fahrenheit)
-    return lista_fahrenheit
+# def converter_celsius_fahrenheit(lista:list[float]) ->list[float]:
+#     lista_fahrenheit = []
+#     for n in lista:
+#         fahrenheit = (n * 1.8) + 32
+#         lista_fahrenheit.append(fahrenheit)
+#     return lista_fahrenheit
 
-print(converter_celsius_fahrenheit([23,2,5,4,5]))
+# print(converter_celsius_fahrenheit([23,2,5,4,5]))
+
+#Calcular Desvio Padrão de uma Lista
+
+def desvio_padrao(lista:list[float]) ->float:
+     media= sum(lista) / len(lista)
+     desvio = 0
+     for n in lista:
+         desvio += (n - media) ** 2
+     desvio = desvio / len(lista)
+     desvio = desvio ** 0.5
+     return desvio
+
+print(desvio_padrao([23,2,5,4,5]))
