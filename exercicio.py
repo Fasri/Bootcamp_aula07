@@ -45,13 +45,21 @@
 
 #Calcular Desvio Padrão de uma Lista
 
-def desvio_padrao(lista:list[float]) ->float:
-     media= sum(lista) / len(lista)
-     desvio = 0
-     for n in lista:
-         desvio += (n - media) ** 2
-     desvio = desvio / len(lista)
-     desvio = desvio ** 0.5
-     return desvio
+# def desvio_padrao(lista:list[float]) ->float:
+#      media= sum(lista) / len(lista)
+#      desvio = 0
+#      for n in lista:
+#          desvio += (n - media) ** 2
+#      desvio = desvio / len(lista)
+#      desvio = desvio ** 0.5
+#      return desvio
 
-print(desvio_padrao([23,2,5,4,5]))
+# print(desvio_padrao([23,2,5,4,5]))
+
+# Encontrar Valores Ausentes em uma Sequência
+
+def encontrar_valores_ausentes(sequencia: list[int]) -> list[int]:
+    completo = set(range(min(sequencia), max(sequencia) + 1))
+    return list(completo - set(sequencia))
+
+print(encontrar_valores_ausentes([23,2,5,4,5]))
